@@ -20,43 +20,74 @@ const Home: NextPage = () => {
         {
             title: 'Chat',
             desc: 'Messenger for communicating with your friends',
-            picture: 'https://abramov.pw/images/chat.png',
+            picture: '/images/chat.png',
             link: 'https://chat.abramov.pw'
         },
         {
             title: 'CollabDev',
             desc: 'A site for finding a team for hackathons and startups',
-            picture: 'https://abramov.pw/images/collabdev.png',
+            picture: 'images/collabdev.png',
             link: 'https://collabdev.ru'
         }
     ]
 
     return (
-        <div>
+        <>
             <Head>
-                <Meta name="theme-color" content="#fff" />
+                <title>Portfolio</title>
+                <meta charSet="UTF-8"/>
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <link rel="icon" type='image/svg' sizes='32x32' href="/favicon.ico" />
             </Head>
-
             <main className={styles.container}>
                 <section className={styles.heroWrapper}>
-                    <h1 className={styles.name}>{'Hi, I\'m Danila Abramov.'}</h1>
-                    <div className={styles.locationWrapper}>
-                        <MapPin/>
-                        <div className={styles.locationText}>Samara, Russia</div>
+                    <div style={{display: 'flex'}}>
+                        <h1 className={styles.name}>{/*Hi, I{'\''}m */}Danila</h1>
                     </div>
-                    <p className={styles.paragraphText}>{'I\'m a full-stack developer. Currently looking for a job'}</p>
-                    <div className={styles.socialWrapper}>
-                        <Link href='https://t.me/danila_abramov' target="_blank" className={styles.contactWrapper}>
-                            <SiTelegram size={44}/>
-                        </Link>
-                        <Link href='mailto:danila.abramov.ssau@gmail.com' target="_blank" className={styles.contactWrapper}>
-                            <SiMaildotru size={44}/>
-                        </Link>
-                        <Link href='https://github.com/danilaabramov' target="_blank" className={styles.contactWrapper}>
-                            <SiGithub size={44}/>
-                        </Link>
+                    <div style={{display: 'flex'}}>
+                        <h1 className={styles.name} style={{color: 'transparent'}}>Abra</h1>
+                        <p style={{width: '16vw'}} className={styles.paragraphText}>
+                            I{'\''}m a full-stack developer. Currently looking for a job
+                        </p>
+                    </div>
+                    <div style={{display: 'flex'}}>
+                        <div style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'flex-end',
+                            height: '13vw',
+                            margin: '5vw 2vw 0 0'
+                        }}>
+                            <div className={styles.socialWrapper}>
+                                <Link href='https://t.me/danila_abramov' target="_blank"
+                                      className={styles.contactWrapper}>
+                                    <SiTelegram size='3.5vw'/>
+                                </Link>
+                                <Link href='mailto:danila.abramov.ssau@gmail.com' target="_blank"
+                                      className={styles.contactWrapper}>
+                                    <SiMaildotru size='3.5vw'/>
+                                </Link>
+                                <Link href='https://github.com/danilaabramov' target="_blank"
+                                      className={styles.contactWrapper}>
+                                    <SiGithub size='3.5vw'/>
+                                </Link>
+                            </div>
+                            <div className={styles.locationWrapper}>
+                                <MapPin size='1.7vw'/>
+                                <div className={styles.locationText}>Samara, Russia</div>
+                            </div>
+                        </div>
+                        <h1 className={styles.name} style={{color: 'transparent'}}>mov</h1>
                     </div>
                 </section>
+
+                <div className="background-animation">
+                    <div id="ball-one"></div>
+                    <div id="ball-two"></div>
+                    <div id="ball-three"></div>
+                    <div className="gradient"></div>
+                </div>
 
                 <section className={styles.cardsWrapper}>
                     {
@@ -72,7 +103,7 @@ const Home: NextPage = () => {
             <footer className={styles.footer}>
                 Copyright © 2023 Abramov Danila. All rights reserved.
             </footer>
-        </div>
+        </>
     )
 }
 
