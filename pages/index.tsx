@@ -31,6 +31,10 @@ const Home: NextPage = () => {
         }
     ]
 
+    let colors: string[] = [
+        '#CD6E3C', '#145C57'
+    ]
+
     return (
         <>
             <Head>
@@ -38,9 +42,17 @@ const Home: NextPage = () => {
                 <meta charSet="UTF-8"/>
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <link rel="icon" type='image/svg' sizes='32x32' href="/favicon.ico" />
+                <link rel="icon" type='image/svg' sizes='32x32' href="/favicon.ico"/>
             </Head>
             <main className={styles.container}>
+
+                <div className="background-animation">
+                    <div id="ball-one"></div>
+                    <div id="ball-two"></div>
+                    <div id="ball-three"></div>
+                    <div className="gradient"></div>
+                </div>
+
                 <section className={styles.heroWrapper}>
                     <div style={{display: 'flex'}}>
                         <h1 className={styles.name}>{/*Hi, I{'\''}m */}Danila</h1>
@@ -57,7 +69,8 @@ const Home: NextPage = () => {
                             flexDirection: 'column',
                             justifyContent: 'flex-end',
                             height: '13vw',
-                            margin: '5vw 2vw 0 0'
+                            margin: '3vw 3vw 0 0',
+                            width: '21vw'
                         }}>
                             <div className={styles.socialWrapper}>
                                 <Link href='https://t.me/danila_abramov' target="_blank"
@@ -82,21 +95,18 @@ const Home: NextPage = () => {
                     </div>
                 </section>
 
-                <div className="background-animation">
-                    <div id="ball-one"></div>
-                    <div id="ball-two"></div>
-                    <div id="ball-three"></div>
-                    <div className="gradient"></div>
-                </div>
-
-                <section className={styles.cardsWrapper}>
-                    {
-                        Projects.map((item, index) => {
-                            return <div key={index}>
-                                <Card title={item.title} desc={item.desc} picture={item.picture} link={item.link}/>
-                            </div>
-                        })
-                    }
+                <section className={styles.cardsContainer}>
+                    <div className={styles.cardsWrapper}>
+                        <h1 style={{fontSize: 50, width: 'calc(100vw - 40px)', maxWidth: 930}}>Pet projects</h1>
+                        {
+                            Projects.map((item, index) => {
+                                return <div key={index}>
+                                    <Card title={item.title} desc={item.desc} picture={item.picture} link={item.link}
+                                          color={colors[index]}/>
+                                </div>
+                            })
+                        }
+                    </div>
                 </section>
             </main>
 

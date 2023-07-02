@@ -1,9 +1,9 @@
 .cardWrapper {
     min-height: 440px;
     width: calc(100vw - 40px);
-    max-width: 900px;
+    max-width: 930px;
     background: #181818;
-    border-radius: 40px;
+    border-radius: 15px;
     padding: 40px;
     display: flex;
     overflow: hidden;
@@ -20,13 +20,13 @@
 }
 
 .desc {
-    font-size: 18px;
-    color: #A7AAAD;
+    font-size: 24px;
     margin: 30px 0;
 }
 
 .link {
-    background: #010001;
+    font-size: 18px;
+    background: #fff;
     width: 100%;
     height: 50px;
     display: flex;
@@ -35,6 +35,7 @@
     border-radius: 10px;
     gap: 10px;
     transition: all .2s;
+    font-weight: 700;
 }
 
 .link > span {

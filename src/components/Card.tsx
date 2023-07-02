@@ -7,15 +7,16 @@ interface CardProps {
     title: string,
     desc: string,
     picture: string,
-    link: string
+    link: string,
+    color: string
 }
 
-const Card = ({title, desc, picture, link}: CardProps) => {
-    return <div className={styles.cardWrapper}>
+const Card = ({title, desc, picture, link, color}: CardProps) => {
+    return <div className={styles.cardWrapper} style={{background: color}}>
         <div className={styles.info}>
             <h1 className={styles.title}>{title}</h1>
             <p className={styles.desc}>{desc}</p>
-            <Link href={link} className={styles.link}>
+            <Link href={link} className={styles.link} style={{color}}>
                 <span>See the Live Site</span>
                 <ArrowRight/>
             </Link>
@@ -24,8 +25,8 @@ const Card = ({title, desc, picture, link}: CardProps) => {
             <Image fill style={{width: '100%', height: '100%'}} src={picture}
                    alt='project-scrin'/>
         </div>
-    </div>;
-};
+    </div>
+}
 
 export default Card;
 
