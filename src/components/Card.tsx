@@ -14,7 +14,7 @@ interface CardProps {
 const Card = ({title, desc, picture, link, color}: CardProps) => {
     return <div className={styles.cardWrapper} style={{background: color}}>
         <div className={styles.info}>
-            <h1 className={styles.title}>{title}</h1>
+            <h1 className={styles.title}><strong>{title}</strong></h1>
             <p className={styles.desc}>{desc}</p>
             <Link href={link} className={styles.link} style={{color}}>
                 <span>See the Live Site</span>

@@ -20,7 +20,7 @@
 }
 
 .desc {
-    font-size: 24px;
+    font-size: 16px;
     margin: 30px 0;
 }
 
@@ -35,7 +35,8 @@
     border-radius: 10px;
     gap: 10px;
     transition: all .2s;
-    font-weight: 700;
+    font-weight: 600;
+    font-family: Inter, sans-serif;
 }
 
 .link > span {

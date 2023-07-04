@@ -28,11 +28,17 @@ const Home: NextPage = () => {
             desc: 'A site for finding a team for hackathons and startups',
             picture: 'images/collabdev.png',
             link: 'https://collabdev.ru'
+        },
+        {
+            title: 'Blog',
+            desc: 'The site is accessible to everyone for writing articles on technology and IT',
+            picture: 'images/blog.png',
+            link: 'https://blog.abramov.pw'
         }
     ]
 
     let colors: string[] = [
-        '#CD6E3C', '#145C57'
+        '#CD6E3C', '#145C57', '#121846'
     ]
 
     return (
@@ -97,7 +103,11 @@ const Home: NextPage = () => {
 
                 <section className={styles.cardsContainer}>
                     <div className={styles.cardsWrapper}>
-                        <h1 style={{fontSize: 50, width: 'calc(100vw - 40px)', maxWidth: 930}}>Pet projects</h1>
+                        <div style={{fontSize: 40, width: 'calc(100vw - 40px)', maxWidth: 930}}>
+                                    <div className='light'>Based on the latest technologies
+                                    <strong> pet projects </strong>
+                                    developed using advanced technologies</div>
+                        </div>
                         {
                             Projects.map((item, index) => {
                                 return <div key={index}>
@@ -110,8 +120,11 @@ const Home: NextPage = () => {
                 </section>
             </main>
 
-            <footer className={styles.footer}>
-                Copyright © 2023 Abramov Danila. All rights reserved.
+            <footer className={styles.footerContainer}>
+                <div className="gradient" style={{transform: 'rotate(180deg)'}}></div>
+                <div className={styles.footer}>
+                    Copyright © 2023 Abramov Danila. All rights reserved.
+                </div>
             </footer>
         </>
     )

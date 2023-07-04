@@ -5,7 +5,7 @@
     align-items: center;
     flex-direction: column;
     gap: 10px;
-    margin: 40px 20px;
+    margin: 0 20px;
     height: calc(100vw / 16 * 8);
 }
 
@@ -47,8 +47,8 @@
 }
 
 .cardsContainer {
-    margin-top: 660px;
-    margin-bottom: -113px;
+    margin-top: 499px;
+    /*margin-bottom: -613px;*/
     background: #fff;
     padding: 0 20px
 }
@@ -58,7 +58,15 @@
     display: flex;
     flex-direction: column;
     gap: 48px;
-    transform: translateY(-500px);
+    transform: translateY(-450px);
+    z-index: 2;
+    position: relative;
+}
+
+.footerContainer {
+    z-index: 1;
+    position: absolute;
+    transform: translateY(-600px);
 }
 
 .footer {
@@ -69,4 +77,15 @@
     background: #010001;
     width: 100vw;
     text-align: center;
+    flex-direction: column;
+}
+
+@media (max-width: 1280px) {
+    .heroWrapper {
+        transform: scale(1.3);
+    }
+
+    .heroWrapper {
+        height: calc(100vw / 16 * 10);
+    }
 }
