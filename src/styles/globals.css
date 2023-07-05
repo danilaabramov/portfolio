@@ -85,8 +85,8 @@ a {
 
 #ball-one {
   background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #9D1455 0%, #9D1455 43.75%, #9D1455 68.75%);
-  height: 400px;
-  width: 400px;
+  height: 30vw;
+  width: 30vw;
   position: absolute;
   top: 0;
   left: 0;
@@ -103,8 +103,8 @@ a {
 
 #ball-two {
   background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #320CA2 0%, #320CA2 43.75%, #320CA2 68.75%);
-  height: 500px;
-  width: 500px;
+  height: 40vw;
+  width: 40vw;
   position: absolute;
   top: 0;
   left: 0;
@@ -121,8 +121,8 @@ a {
 
 #ball-three {
   background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #08A6CE 0%, #6352B1 43.75%, #8B0EB7 68.75%);
-  height: 200px;
-  width: 200px;
+  height: 10vw;
+  width: 10vw;
   left: 0;
   top: 0;
   position: absolute;
@@ -152,12 +152,10 @@ a {
 
   35% {
     transform: translate3d(20vw, 20vh, 0);
-    width: 450px;
   }
 
   50% {
     transform: translate3d(20vw, 0vh, 0);
-    width: 500px;
   }
 
   65% {
@@ -166,11 +164,12 @@ a {
 
   85% {
     transform: translate3d(60vw, 20vh, 0);
-    width: 400px;
   }
 
   100% {
     transform: translate3d(60vw, 40vh, 0);
+    height: 30vw;
+    width: 30vw;
   }
 }
 
@@ -189,12 +188,10 @@ a {
 
   35% {
     transform: translate3d(30vw, 40vh, 0);
-    width: 550px;
   }
 
   50% {
     transform: translate3d(40vw, 40vh, 0);
-    width: 600px;
   }
 
   65% {
@@ -203,11 +200,12 @@ a {
 
   85% {
     transform: translate3d(50vw, 20vh, 0);
-    width: 500px;
   }
 
   100% {
     transform: translate3d(40vw, 0vh, 0);
+    height: 40vw;
+    width: 40vw;
   }
 }
 
@@ -218,17 +216,14 @@ a {
 
   15% {
     transform: translate3d(38vw, 48vh, 0);
-    width: 250px;
   }
 
   25% {
     transform: translate3d(59vw, 35vh, 0);
-    width: 300px;
   }
 
   35% {
     transform: translate3d(73vw, 80vh, 0);
-    width: 200px;
   }
 
   50% {
@@ -245,6 +240,8 @@ a {
 
   100% {
     transform: translate3d(77vw, 95vh, 0);
+    height: 10vw;
+    width: 10vw;
   }
 }
 
@@ -252,11 +249,5 @@ a {
 @media (max-width: 1280px) {
   .background-animation {
     height: calc(100vw / 16 * 10 + 500px);
-  }
-}
-
-@media (max-width: 710px) {
-  h1 {
-    /*font-size: 10px;*/
   }
 }
