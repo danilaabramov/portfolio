@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Card from "@/components/Card";
 import {SiGithub, SiMaildotru, SiTelegram} from '@icons-pack/react-simple-icons'
 import {Meta} from "next/dist/lib/metadata/generate/meta";
+import Footer from "@/components/Footer";
 
 const Home: NextPage = () => {
 
@@ -37,19 +38,18 @@ const Home: NextPage = () => {
         }
     ]
 
-    let colors: string[] = [
-        '#CD6E3C', '#145C57', '#121846'
-    ]
+    let colors: string[] = ['#CD6E3C', '#145C57', '#121846']
 
     return (
         <>
             <Head>
-                <title>Portfolio</title>
+                <title>Abramov Danila | Portfolio</title>
                 <meta charSet="UTF-8"/>
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <link rel="icon" type='image/svg' sizes='32x32' href="/favicon.ico"/>
             </Head>
+
             <main className={styles.container}>
 
                 <div className="background-animation">
@@ -60,24 +60,17 @@ const Home: NextPage = () => {
                 </div>
 
                 <section className={styles.heroWrapper}>
-                    <div style={{display: 'flex'}}>
-                        <h1 className={styles.name}>{/*Hi, I{'\''}m */}Danila</h1>
+                    <div className='flex'>
+                        <h1 className={styles.name}>Danila</h1>
                     </div>
-                    <div style={{display: 'flex'}}>
-                        <h1 className={styles.name} style={{color: 'transparent'}}>Abra</h1>
-                        <p style={{width: '16vw'}} className={styles.paragraphText}>
+                    <div className='flex'>
+                        <h1 className={styles.nameTransparent}>Abra</h1>
+                        <p className={styles.paragraphText}>
                             I{'\''}m a full-stack developer. Currently looking for a job
                         </p>
                     </div>
-                    <div style={{display: 'flex'}}>
-                        <div style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'flex-end',
-                            height: '13vw',
-                            margin: '3vw 3vw 0 0',
-                            width: '21vw'
-                        }}>
+                    <div className='flex'>
+                        <div className={styles.socialContainer}>
                             <div className={styles.socialWrapper}>
                                 <Link href='https://t.me/danila_abramov' target="_blank"
                                       className={styles.contactWrapper}>
@@ -97,13 +90,13 @@ const Home: NextPage = () => {
                                 <div className={styles.locationText}>Samara, Russia</div>
                             </div>
                         </div>
-                        <h1 className={styles.name} style={{color: 'transparent'}}>mov</h1>
+                        <h1 className={styles.nameTransparent}>mov</h1>
                     </div>
                 </section>
 
                 <section className={styles.cardsContainer}>
                     <div className={styles.cardsWrapper}>
-                        <div style={{fontSize: 40, width: 'calc(100vw - 40px)', maxWidth: 930}}>
+                        <div className={styles.mainTitle}>
                                     <div className='light'>Based on the latest technologies
                                     <strong> pet projects </strong>
                                     developed using advanced technologies</div>
@@ -120,12 +113,7 @@ const Home: NextPage = () => {
                 </section>
             </main>
 
-            <footer className={styles.footerContainer}>
-                <div className="gradient" style={{transform: 'rotate(180deg)'}}></div>
-                <div className={styles.footer}>
-                    Copyright © 2023 Abramov Danila. All rights reserved.
-                </div>
-            </footer>
+            <Footer/>
         </>
     )
 }
