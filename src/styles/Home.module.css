@@ -60,9 +60,8 @@
 
 .cardsContainer {
     margin-top: 499px;
-    /*margin-bottom: -613px;*/
     background: #fff;
-    padding: 0 20px
+    padding: 0 20px;
 }
 
 .cardsWrapper {
@@ -73,6 +72,7 @@
     transform: translateY(-450px);
     z-index: 2;
     position: relative;
+    background: transparent;
 }
 
 .footerContainer {
@@ -93,9 +93,9 @@
 }
 
 .mainTitle {
-    font-size: 40px;
     width: calc(100vw - 40px);
-    max-width: 930px
+    max-width: 930px;
+    font-size: 30px;
 }
 
 @media (max-width: 1280px) {

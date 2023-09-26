@@ -1,14 +1,16 @@
-import type {NextPage} from 'next'
+"use client"
+
+import React from "react";
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import {MapPin} from 'lucide-react'
 import Link from 'next/link'
 import Card from "@/components/Card";
 import {SiGithub, SiMaildotru, SiTelegram} from '@icons-pack/react-simple-icons'
-import {Meta} from "next/dist/lib/metadata/generate/meta";
 import Footer from "@/components/Footer";
+import {Metadata} from "next";
 
-const Home: NextPage = () => {
+function Home() {
 
     interface Project {
         title: string,
@@ -43,11 +45,10 @@ const Home: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Abramov Danila | Portfolio</title>
                 <meta charSet="UTF-8"/>
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <link rel="icon" type='image/svg' sizes='32x32' href="/favicon.ico"/>
+                <link rel="icon" type='image/svg' sizes='32x32' href="/public/favicon.ico"/>
             </Head>
 
             <main className={styles.container}>
@@ -97,12 +98,13 @@ const Home: NextPage = () => {
                 <section className={styles.cardsContainer}>
                     <div className={styles.cardsWrapper}>
                         <div className={styles.mainTitle}>
-                                    <div className='light'>Based on the latest technologies
-                                    <strong> pet projects </strong>
-                                    developed using advanced technologies</div>
+                            <div className='light'>Based on the latest technologies
+                                <strong> pet projects </strong>
+                                developed using advanced technologies
+                            </div>
                         </div>
                         {
-                            Projects.map((item, index) => {
+                            Projects.map((item: Project, index: number) => {
                                 return <div key={index}>
                                     <Card title={item.title} desc={item.desc} picture={item.picture} link={item.link}
                                           color={colors[index]}/>

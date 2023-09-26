@@ -1,29 +1,28 @@
 {
-  "name": "abramov",
+  "name": "abramov-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "export": "next export"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@icons-pack/react-simple-icons": "^8.0.1",
-    "gsap": "^3.12.2",
-    "lucide-react": "^0.256.0",
-    "next": "13.4.7",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "simple-icons": "^9.3.0"
+    "@icons-pack/react-simple-icons": "^9.0.1",
+    "lucide-react": "^0.279.0",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "simple-icons": "^9.16.0",
+    "styled-components": "^6.0.8"
   },
   "devDependencies": {
-    "@types/node": "20.3.2",
-    "@types/react": "18.2.14",
-    "@types/react-dom": "18.2.6",
-    "eslint": "8.43.0",
-    "eslint-config-next": "13.4.7",
-    "typescript": "5.1.5"
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "typescript": "latest"
   }
 }
