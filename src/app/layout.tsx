@@ -1,20 +1,24 @@
 import '@/styles/globals.css'
 import type {Metadata} from 'next'
-import {Inter} from 'next/font/google'
 import StyledComponentsRegistry from "@/lib/registry";
-import {NextFont} from "next/dist/compiled/@next/font";
-
-const inter: NextFont = Inter({subsets: ['latin']})
+import React, {ReactNode} from "react";
+import Head from "next/head";
 
 export const metadata: Metadata = {
     title: 'Abramov Danila | Portfolio',
     description: 'FullStack developer',
 }
 
-export default function RootLayout({children}: { children: React.ReactNode }) {
+export default function RootLayout({children}: { children: ReactNode }) {
     return (
         <html lang="en">
-        <body className={inter.className}>
+        <Head>
+            <meta charSet="UTF-8"/>
+            <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <link rel="icon" type='image/svg' sizes='32x32' href="/public/favicon.ico"/>
+        </Head>
+        <body>
         <StyledComponentsRegistry>
             {children}
         </StyledComponentsRegistry>

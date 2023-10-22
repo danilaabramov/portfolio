@@ -50,7 +50,6 @@ const Desc = styled.p`
 `
 
 const Button = styled.div`
-  
   & a {
     font-size: 18px;
     background: #fff;
@@ -66,20 +65,19 @@ const Button = styled.div`
     font-family: Inter, sans-serif;
   }
 
-  //& a span {
-  //  transition: transform .2s;
-  //}
-
   & a:hover {
     transform: scale(1.02);
-    transition: scale .2s;
-    gap: 30px;
+    transition: all .2s;
   }
 
-  //& a:hover span {
-  //  transform: translate(10px);
-  //  transition: transform .2s;
-  //}
+  & a span {
+    transition: all .2s;
+  }
+  
+  & a:hover span {
+    transition: all .2s;
+    transform: translateX(13px);
+  }
 
   @media(max-width: 931px) {
     width: calc(100vw - 72px);
@@ -107,8 +105,8 @@ function Card({title, desc, picture, link, color}: CardProps) {
                 <Desc>{desc}</Desc>
                 <Button>
                     <Link href={link} style={{color}}>
-                        <span>See the Live Site</span>
-                        <ArrowRight/>
+                        <div>See the Live Site</div>
+                        <span><ArrowRight/></span>
                     </Link>
                 </Button>
             </Info>

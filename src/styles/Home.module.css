@@ -40,7 +40,8 @@
 .paragraphText {
     font-size: 2vw;
     margin: 2vw 0 0 5vw;
-    width: 16vw
+    width: 16vw;
+    z-index: 0;
 }
 
 .socialContainer {
@@ -50,6 +51,7 @@
     height: 13vw;
     margin: 3vw 3vw 0 0;
     width: 21vw;
+    z-index: 0;
 }
 
 .socialWrapper {

@@ -1,14 +1,12 @@
 "use client"
 
-import React from "react";
-import Head from 'next/head'
+import React, {useState} from "react";
 import styles from '@/styles/Home.module.css'
 import {MapPin} from 'lucide-react'
 import Link from 'next/link'
 import Card from "@/components/Card";
 import {SiGithub, SiMaildotru, SiTelegram} from '@icons-pack/react-simple-icons'
 import Footer from "@/components/Footer";
-import {Metadata} from "next";
 
 function Home() {
 
@@ -42,22 +40,18 @@ function Home() {
 
     let colors: string[] = ['#CD6E3C', '#145C57', '#121846']
 
+    const [st, setSt] = useState(0)
+
     return (
         <>
-            <Head>
-                <meta charSet="UTF-8"/>
-                <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <link rel="icon" type='image/svg' sizes='32x32' href="/public/favicon.ico"/>
-            </Head>
-
             <main className={styles.container}>
-
-                <div className="background-animation">
-                    <div id="ball-one"></div>
-                    <div id="ball-two"></div>
-                    <div id="ball-three"></div>
-                    <div className="gradient"></div>
+                <div style={{height: 0}}>
+                    <div className="background-animation">
+                        <div id="ball-one"></div>
+                        <div id="ball-two"></div>
+                        <div id="ball-three"></div>
+                        <div className="gradient"></div>
+                    </div>
                 </div>
 
                 <section className={styles.heroWrapper}>
@@ -77,7 +71,7 @@ function Home() {
                                       className={styles.contactWrapper}>
                                     <SiTelegram size='3.5vw'/>
                                 </Link>
-                                <Link href='mailto:danila.abramov.ssau@gmail.com' target="_blank"
+                                <Link href='mailto:danila@abramov.pw' target="_blank"
                                       className={styles.contactWrapper}>
                                     <SiMaildotru size='3.5vw'/>
                                 </Link>
@@ -98,10 +92,10 @@ function Home() {
                 <section className={styles.cardsContainer}>
                     <div className={styles.cardsWrapper}>
                         <div className={styles.mainTitle}>
-                            <div className='light'>Based on the latest technologies
+                            <p className='light'>Based on the latest technologies
                                 <strong> pet projects </strong>
                                 developed using advanced technologies
-                            </div>
+                            </p>
                         </div>
                         {
                             Projects.map((item: Project, index: number) => {
