@@ -6,19 +6,20 @@
     flex-direction: column;
     gap: 10px;
     margin: 0 20px;
-    height: calc(100vw / 16 * 8);
+    height: min(calc(130vw / 16 * 8), 100lvh);
+    pointer-events: none;
 }
 
 .name, .nameTransparent {
     font-family: Public Sans, sans-serif;
     background-clip: text;
-    font-size: 17vw;
+    font-size: min(22vw, 216px);
     text-align: center;
     text-transform: uppercase;
     padding: 0;
-    margin: -3vw 0;
+    margin: max(-3.9vw, -38px) 0;
     transform: scaleX(1.1);
-    letter-spacing: -1vw;
+    letter-spacing: max(-1vw, -10px);
     -webkit-text-stroke: 2px white;
 }
 
@@ -30,17 +31,17 @@
     display: flex;
     gap: 5px;
     justify-content: center;
-    height: 6.6vw;
+    height: min(8.6vw, 84px);
 }
 
 .locationText, .contactText {
-    font-size: 1.7vw;
+    font-size: min(2.2vw, 22px);
 }
 
 .paragraphText {
-    font-size: 2vw;
-    margin: 2vw 0 0 5vw;
-    width: 16vw;
+    font-size: min(2.6vw, 25px);
+    margin: min(1.2vw, 12px) 0 0 min(6.5vw, 64px);
+    width: min(20vw, 200px);
     z-index: 0;
 }
 
@@ -48,22 +49,22 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 13vw;
-    margin: 3vw 3vw 0 0;
-    width: 21vw;
+    height: min(16.9vw, 166px);
+    margin: min(3.9vw, 38px) min(3.9vw, 38px) 0 0;
+    width: min(27.3vw, 268px);
     z-index: 0;
 }
 
 .socialWrapper {
     display: flex;
-    gap: 2vw;
+    gap: min(2.6vw, 25px);
     justify-content: center;
 }
 
 .cardsContainer {
-    margin-top: 499px;
     background: #fff;
-    padding: 0 20px;
+    padding: 20px;
+    border-top: 1px solid black;
 }
 
 .cardsWrapper {
@@ -71,38 +72,14 @@
     display: flex;
     flex-direction: column;
     gap: 48px;
-    transform: translateY(-450px);
+    margin-top: -450px;
     z-index: 2;
     position: relative;
-    background: transparent;
-}
-
-.footerContainer {
-    z-index: 1;
-    position: absolute;
-    transform: translateY(-600px);
-}
-
-.footer {
-    height: 113px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #010001;
-    width: 100vw;
-    text-align: center;
-    flex-direction: column;
 }
 
 .mainTitle {
     width: calc(100vw - 40px);
     max-width: 930px;
-    font-size: 30px;
-}
-
-@media (max-width: 1280px) {
-    .heroWrapper {
-        transform: scale(1.3);
-        height: calc(100vw / 16 * 12);
-    }
+    font-size: clamp(30px, 4vw, 50px);
+    margin-bottom: 0;
 }

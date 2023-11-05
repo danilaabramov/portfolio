@@ -3,9 +3,10 @@ import type {Metadata} from 'next'
 import StyledComponentsRegistry from "@/lib/registry";
 import React, {ReactNode} from "react";
 import Head from "next/head";
+import Footer from "@/app/Footer";
 
 export const metadata: Metadata = {
-    title: 'Abramov Danila | Portfolio',
+    title: 'Danila Abramov | Portfolio',
     description: 'FullStack developer',
 }
 
@@ -21,6 +22,7 @@ export default function RootLayout({children}: { children: ReactNode }) {
         <body>
         <StyledComponentsRegistry>
             {children}
+            <Footer/>
         </StyledComponentsRegistry>
         </body>
         </html>

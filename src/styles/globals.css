@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Public Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Martian Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html,
 body {
@@ -9,6 +10,7 @@ body {
   font-family: Inter, sans-serif;
   color: white;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 body {
@@ -16,10 +18,12 @@ body {
 }
 
 h1, strong {
+  font-family: Montserrat, sans-serif;
   font-weight: 900;
 }
 
 .light {
+  font-family: Montserrat, sans-serif;
   font-weight: 100;
 }
 
@@ -43,15 +47,6 @@ a {
   }
 }
 
-.background-animation {
-  height: calc(100vw / 16 * 8 + 500px);
-  width: 100vw;
-  background: #010001;
-  display: flex;
-  align-items: flex-end;
-  overflow-x: hidden;
-}
-
 .gradient {
   background: linear-gradient(180deg, rgba(1,0,1,1) 0%, rgba(22,18,107,1) 25%, rgba(42,112,243,1) 62%, rgba(255,255,255,1) 100%);
   height: 500px;
@@ -68,7 +63,7 @@ a {
 #ball-one {
   background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #9D1455 0%, #9D1455 43.75%, #9D1455 68.75%);
   height: 30vw;
-  width: 30vw;
+  aspect-ratio: 1;
   position: absolute;
   top: 0;
   left: 0;
@@ -76,31 +71,47 @@ a {
   -webkit-filter: blur(70px);
   -ms-filter: blur(70px);
   filter: blur(70px);
-  transition: all 30s;
-  animation: move1 30s linear infinite;
-  -webkit-animation: move1 30s linear infinite;
+  transition: all 20s;
+  animation: move1 20s linear infinite;
+  -webkit-animation: move1 20s linear infinite;
 }
 
 #ball-two {
   background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #320CA2 0%, #320CA2 43.75%, #320CA2 68.75%);
   height: 40vw;
-  width: 40vw;
+  aspect-ratio: 1;
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 100%;
-  -webkit-filter: blur(70px);
-  -ms-filter: blur(70px);
-  filter: blur(70px);
-  transition: all 30s;
-  animation: move2 30s linear infinite;
-  -webkit-animation: move2 30s linear infinite;
+  -webkit-filter: blur(80px);
+  -ms-filter: blur(80px);
+  filter: blur(80px);
+  transition: all 20s;
+  animation: move2 20s linear infinite;
+  -webkit-animation: move2 20s linear infinite;
 }
 
 #ball-three {
-  background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #08A6CE 0%, #6352B1 43.75%, #8B0EB7 68.75%);
-  height: 10vw;
-  width: 10vw;
+  background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #F9CA0A 0%, #42581C 43.75%, #F9CA0A 68.75%);
+  height: 15vw;
+  aspect-ratio: 1;
+  left: 0;
+  top: 0;
+  position: absolute;
+  border-radius: 100%;
+  -webkit-filter: blur(50px);
+  -ms-filter: blur(50px);
+  filter: blur(50px);
+  transition: all 20s;
+  animation: move3 20s linear infinite;
+  -webkit-animation: move3 20s linear infinite;
+}
+
+#ball-4 {
+  background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #1DA59D 0%, #1DA59D 43.75%, #1DA59D 68.75%);
+  height: 30vw;
+  aspect-ratio: 1;
   left: 0;
   top: 0;
   position: absolute;
@@ -108,9 +119,9 @@ a {
   -webkit-filter: blur(70px);
   -ms-filter: blur(70px);
   filter: blur(70px);
-  transition: all 30s;
-  animation: move3 30s linear infinite;
-  -webkit-animation: move3 30s linear infinite;
+  transition: all 20s;
+  animation: move4 20s linear infinite;
+  -webkit-animation: move4 20s linear infinite;
 }
 
 @keyframes move1 {
@@ -144,8 +155,6 @@ a {
 
   100% {
     transform: translate3d(60vw, 40vh, 0);
-    height: 30vw;
-    width: 30vw;
   }
 }
 
@@ -180,8 +189,6 @@ a {
 
   100% {
     transform: translate3d(40vw, 0vh, 0);
-    height: 40vw;
-    width: 40vw;
   }
 }
 
@@ -216,14 +223,74 @@ a {
 
   100% {
     transform: translate3d(77vw, 95vh, 0);
-    height: 10vw;
-    width: 10vw;
   }
 }
 
+@keyframes move1 {
+  0% {
+    transform: translate3d(60vw, 40vh, 0);
+  }
 
-@media (max-width: 1280px) {
-  .background-animation {
-    height: calc(100vw / 16 * 12 + 500px);
+  15% {
+    transform: translate3d(40vw, 40vh, 0);
+  }
+
+  25% {
+    transform: translate3d(20vw, 40vh, 0);
+  }
+
+  35% {
+    transform: translate3d(20vw, 20vh, 0);
+  }
+
+  50% {
+    transform: translate3d(20vw, 0vh, 0);
+  }
+
+  65% {
+    transform: translate3d(40vw, 0vh, 0);
+  }
+
+  85% {
+    transform: translate3d(60vw, 20vh, 0);
+  }
+
+  100% {
+    transform: translate3d(60vw, 40vh, 0);
   }
 }
+
+@keyframes move4 {
+  0% {
+    transform: translate3d(40vw, 0vh, 0);
+  }
+
+  15% {
+    transform: translate3d(50vw, 20vh, 0);
+  }
+
+  25% {
+    transform: translate3d(60vw, 40vh, 0);
+  }
+
+  35% {
+    transform: translate3d(40vw, 40vh, 0);
+  }
+
+  50% {
+    transform: translate3d(30vw, 40vh, 0);
+  }
+
+  65% {
+    transform: translate3d(30vw, 20vh, 0);
+  }
+
+  85% {
+    transform: translate3d(30vw, 0vh, 0);
+  }
+
+  100% {
+    transform: translate3d(40vw, 0vh, 0);
+  }
+}
+
